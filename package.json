@@ -1,0 +1,7 @@
+{
+  "name": "platzi-punks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Joaquín Jiménez García <garcia.jjimenez@gmail.com>",
+  "license": "MIT"
+}
