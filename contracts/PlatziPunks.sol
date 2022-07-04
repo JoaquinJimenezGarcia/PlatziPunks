@@ -34,43 +34,43 @@ contract PlatziPunks is ERC721, ERC721Enumerable, PlatziPunksDNA {
     }
 
     function _paramsURI(uint256 _dna) internal view returns (string memory) {
-    string memory params;
+        string memory params;
 
-    {
-        params = string(
-            abi.encodePacked(
-                "accessoriesType=",
-                getAccessoriesType(_dna),
-                "&clotheColor=",
-                getClotheColor(_dna),
-                "&clotheType=",
-                getClotheType(_dna),
-                "&eyeType=",
-                getEyeType(_dna),
-                "&eyebrowType=",
-                getEyeBrowType(_dna),
-                "&facialHairColor=",
-                getFacialHairColor(_dna),
-                "&facialHairType=",
-                getFacialHairType(_dna),
-                "&hairColor=",
-                getHairColor(_dna),
-                "&hatColor=",
-                getHatColor(_dna),
-                "&graphicType=",
-                getGraphicType(_dna),
-                "&mouthType=",
-                getMouthType(_dna),
-                "&skinColor=",
-                getSkinColor(_dna),
-                "&topType=",
-                getTopType(_dna)
-            )
-        );
+        {
+            params = string(
+                abi.encodePacked(
+                    "accessoriesType=",
+                    getAccessoriesType(_dna),
+                    "&clotheColor=",
+                    getClotheColor(_dna),
+                    "&clotheType=",
+                    getClotheType(_dna),
+                    "&eyeType=",
+                    getEyeType(_dna),
+                    "&eyebrowType=",
+                    getEyeBrowType(_dna),
+                    "&facialHairColor=",
+                    getFacialHairColor(_dna),
+                    "&facialHairType=",
+                    getFacialHairType(_dna),
+                    "&hairColor=",
+                    getHairColor(_dna),
+                    "&hatColor=",
+                    getHatColor(_dna),
+                    "&graphicType=",
+                    getGraphicType(_dna),
+                    "&mouthType=",
+                    getMouthType(_dna),
+                    "&skinColor=",
+                    getSkinColor(_dna),
+                    "&topType=",
+                    getTopType(_dna)
+                )
+            );
+        }
+
+        return params;
     }
-
-    return params;
-}
 
     function tokenURI(uint256 tokenId) public view override returns (string memory) {
         require(_exists(tokenId), "ERC721 Metadata: URI query for nonexisting token.");
