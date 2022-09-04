@@ -21,7 +21,7 @@ contract PlatziPunks is ERC721, ERC721Enumerable, PlatziPunksDNA {
     function mint() public {
         uint256 current = _idCounter.current();
         
-        require(current < maxSupply, "No more PlatziPunks left.");
+        require(current <= maxSupply, "No more PlatziPunks left.");
         
         tokenDNA[current] = deterministicPseudoRandomDNA(current, msg.sender);
         _safeMint(msg.sender, current);
